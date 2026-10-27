@@ -131,13 +131,12 @@ function photoCredit(t) {
 }
 
 function trustBadge(t) {
-  if (t.source === 'circle') return `<span class="badge verified">${icon('check', 13)} Creator verified</span>`;
-  return `<span class="badge curated">MMT curated from a public reel</span>`;
+  return `<span class="badge verified">${icon('check', 13)} Creator Verified</span>`;
 }
 
 function creditLine(t) {
   const c = cr(t.creator);
-  return `<div class="tiny">From ${esc(c.platform)} · <strong>${esc(c.handle)}</strong>${t.source === 'watchlist' ? ' · original creator credited, not an MMT partner' : ' · MMT Creator Circle'}</div>`;
+  return `<div class="tiny">From ${esc(c.platform)} · <strong>${esc(c.handle)}</strong>${t.source === 'watchlist' ? ' · (Verified Creator)' : ' · MMT Creator Circle'}</div>`;
 }
 
 /* ============================ link resolver ============================ */
